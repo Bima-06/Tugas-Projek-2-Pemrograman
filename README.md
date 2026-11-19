@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Sistem Pengelolaan Peminjaman Peralatan Laboratorium
 
 ## Anggota Kelompok
@@ -32,3 +33,7 @@ Dennis Pratama Saputra (K3525023): models/mahasiswa.py
 Allicya Nailah Fairuza (K3525048): models/transaksi.py
 
 Arofa Karindra Bimantara (K3525051): models/alat.py, models/kategori.py
+=======
+# Tugas-Projek-2-Pemrograman
+
+>>>>>>> c2f2a9811f6eb44f4058b33b7956eb38e767497e
