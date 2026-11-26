@@ -20,7 +20,7 @@ class SistemPeminjaman:
             self._muat_data_awal()
 
     def muat_ulang_data(self) -> None:
-        """Memuat data terbaru dari TiDB Cloud agar sinkron antar anggota kelompok."""
+        """Memuat data terbaru dari database MySQL agar konsisten dengan penggunaan XAMPP lokal."""
         self.data_kategori = DatabaseHandler.muat_kategori()
         self.data_mahasiswa = DatabaseHandler.muat_mahasiswa()
         self.data_alat = DatabaseHandler.muat_alat(self.data_kategori)

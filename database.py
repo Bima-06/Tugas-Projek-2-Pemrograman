@@ -7,7 +7,7 @@ class Database:
             "host": "localhost",
             "port": 3306,
             "user": "root",
-            "password": "",  # Kosong secara default di XAMPP
+            "password": "",
             "database": "peminjaman_alat",
             "charset": "utf8mb4",
             "cursorclass": pymysql.cursors.DictCursor,
@@ -15,4 +15,10 @@ class Database:
         }
 
     def connect(self):
-        return pymysql.connect(**self.config)
+        try:
+            return pymysql.connect(**self.config)
+        except pymysql.err.OperationalError as e:
+            raise ConnectionError(
+                "Gagal terhubung ke MySQL. Pastikan service MySQL di XAMPP sudah berjalan "
+                "dan database 'peminjaman_alat' tersedia."
+            ) from e
